@@ -34,9 +34,11 @@ const IndexPage = () => {
             onChange={handleEditorChange}
             fontSize={14}
             height="1000px"
+            width="100%"
             showPrintMargin
             showGutter
             highlightActiveLine
+            wrapEnabled
             value={beforeSql}
             setOptions={{
               enableBasicAutocompletion: false,
@@ -54,12 +56,14 @@ const IndexPage = () => {
             theme="sqlserver"
             name="blah3"
             height="1000px"
+            width="100%"
             onLoad={handleOnload}
             onChange={handleEditorChange}
             fontSize={14}
             showPrintMargin
             showGutter
             highlightActiveLine
+            wrapEnabled
             value={formatSql}
             setOptions={{
               enableBasicAutocompletion: false,
