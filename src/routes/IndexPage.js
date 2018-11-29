@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import sqlFormatter from 'sql-formatter';
-import { Button, Row, Col } from 'antd';
+import {
+  Button, Row, Col, message,
+} from 'antd';
 import brace from 'brace';
 import 'brace/theme/sqlserver';
 import 'brace/mode/mysql';
@@ -17,6 +19,7 @@ const IndexPage = () => {
   const handleFormatSql = () => {
     const newFormatSql = sqlFormatter.format(beforeSql);
     setFormatSql(newFormatSql);
+    // message.success('format success', 0.5);
   };
   const handleEditorChange = (value) => {
     setBeforeSql(value);
